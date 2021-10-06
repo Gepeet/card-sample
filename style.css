@@ -1,0 +1,144 @@
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'inter', sans-serif;
+    font-size: 14px;
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    width: 375px;
+    margin: auto;
+}
+
+.card {
+    margin-top: 10%;
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    border-radius: 8px;
+    overflow: auto;
+}
+
+
+.card .images {
+    height: 250px;
+    width: 100%;
+    background-image: url(images/image-header-mobile.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.card .images::after {
+    content: '';
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    background-color: hsl(277, 64%, 61%);
+    opacity: 50%;
+    
+}
+
+.details {
+    padding: 30px;
+}
+
+.details h1 {
+    font-size: 30px;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+}
+
+h1 span {
+    font-size: 30px;
+    color: hsl(277, 64%, 61%);
+}
+
+.details p {
+    color: hsla(0, 0%, 100%, 0.6);
+    line-height: 1.3rem;
+    text-align:center;
+    word-spacing: 3px;
+    font-size: 14px;
+}
+
+.infos  {
+    padding: 15px;
+    text-align: center;
+}
+
+.infos-1 {
+    margin-top: 25px;
+}
+
+.infos h3 {
+    color: hsl(0, 0%, 100%);
+    font-size: 25px;
+    padding-bottom: 5px;
+}
+
+.infos p {
+    text-transform: uppercase;
+    font-size: 14;
+}
+
+@media (min-width: 1200px){
+
+    body {
+        margin: 50px 0px;
+        width: 100%;
+    }
+    .card {
+        flex-direction: row-reverse;
+        margin: auto;
+        width: 80%;
+        height: 400px;
+    }
+
+    .details {
+        padding: 50px 110px;
+    }
+
+    
+    .details h1 {
+        text-align: left;
+        font-size: 35px;
+    }
+
+    .details span{
+        font-size: 35px;
+    }
+
+    .details p {
+        text-align: left;
+        padding-right: 20px;
+        margin-bottom: 50px;
+    }
+
+    .card .images {
+        background-image: url(images/image-header-desktop.jpg);
+        width: 100%;
+        height: 100%;
+    }
+    .card .images::after {
+        height: 100%;
+    }
+
+    .numbers {
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+
+    .numbers >* {
+        padding:0;
+        margin: 0;
+        margin-right: 25px;
+        text-align: left;
+    }
+
+}
